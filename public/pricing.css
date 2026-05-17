@@ -111,6 +111,22 @@ body {
   overflow: hidden;
 }
 
+.card--center::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 174px;
+  width: 100%;
+  left: 67px;
+  top: -76px;
+  transform: rotate(7deg);
+  opacity: .7;
+  border-radius: 90px;
+  filter: blur(100px);
+  background: var(--gradient-featured-top);
+  pointer-events: none;
+}
+
 .card__icon-row {
   display: flex;
   align-items: center;
