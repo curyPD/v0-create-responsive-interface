@@ -1,0 +1,308 @@
+/* Import Inter Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+/* Reset and Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Responsive rem units */
+html {
+  font-size: 10px;
+  /* 1rem = 10px for screens > 1280px */
+}
+
+@media (max-width: 1280px) {
+  html {
+    font-size: 9px;
+    /* 1rem = 9px for screens 720-1280px */
+  }
+}
+
+@media (max-width: 720px) {
+  html {
+    font-size: 8px;
+    /* 1rem = 8px for screens < 720px */
+  }
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8f9fc;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+}
+
+/* Pricing Section */
+.pricing {
+  width: 100%;
+  max-width: 140rem;
+}
+
+.pricing__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.9rem;
+  /* 39px */
+  flex-wrap: wrap;
+}
+
+/* Card Base */
+.card {
+  background: #ffffff;
+  border-radius: 2rem;
+  padding: 3.2rem;
+  /* 32px */
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0.4rem 2.4rem rgba(23, 15, 73, 0.04);
+}
+
+/* Side Cards (Freelancer & Enterprise) */
+.card--side {
+  width: 35.6rem;
+  /* 356px */
+}
+
+.card--side .card__icon {
+  height: 5.3rem;
+  /* 53px */
+  width: auto;
+  align-self: flex-start;
+  margin-bottom: 2.8rem;
+  /* 28px */
+}
+
+.card--side .card__title {
+  font-size: 2.4rem;
+  /* 24px */
+  font-weight: 500;
+  color: #170f49;
+  margin-bottom: 2.4rem;
+  /* 24px */
+}
+
+.card--side .card__description {
+  font-size: 1.6rem;
+  /* 16px */
+  font-weight: 400;
+  color: #6f6c8f;
+  line-height: 1.5;
+  margin-bottom: 4.2rem;
+  /* 42px */
+}
+
+.card--side .card__price {
+  margin-bottom: 4.2rem;
+  /* 42px */
+}
+
+.card--side .card__price-value {
+  font-size: 3rem;
+  /* 30px */
+  font-weight: 500;
+  color: #170f49;
+}
+
+.card--side .card__price-period {
+  font-size: 1.6rem;
+  /* 16px */
+  font-weight: 400;
+  color: #a0a3bd;
+}
+
+/* Center Card (Agency) */
+.card--center {
+  position: relative;
+  width: 45.4rem;
+  /* 454px */
+  overflow: hidden;
+}
+
+.card--center::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 174px;
+  width: 100%;
+  left: 67px;
+  top: -76px;
+  transform: rotate(7deg);
+  opacity: .7;
+  border-radius: 90px;
+  filter: blur(100px);
+  background: radial-gradient(#D2CEFF, #897FFF);
+  pointer-events: none;
+}
+
+.card__icon-row {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3.6rem;
+  /* 36px */
+}
+
+.card--center .card__icon {
+  height: 5.3rem;
+  /* 53px */
+  width: auto;
+}
+
+.card--center .card__title {
+  font-size: 3rem;
+  /* 30px */
+  font-weight: 500;
+  color: #170f49;
+  margin-bottom: 2.4rem;
+  /* 24px */
+}
+
+.card--center .card__description {
+  font-size: 1.8rem;
+  /* 18px */
+  font-weight: 400;
+  color: #6f6c8f;
+  line-height: 1.5;
+  margin-bottom: 4.2rem;
+  /* 42px */
+}
+
+.card--center .card__price {
+  margin-bottom: 4.2rem;
+  /* 42px */
+}
+
+.card--center .card__price-value {
+  font-size: 3.6rem;
+  /* 36px */
+  font-weight: 500;
+  color: #170f49;
+}
+
+.card--center .card__price-period {
+  font-size: 1.8rem;
+  /* 18px */
+  font-weight: 400;
+  color: #a0a3bd;
+}
+
+/* Badge */
+.card__badge {
+  background: linear-gradient(6deg, #4A3AFF, #8C82FF);
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 0.6rem 1.4rem;
+  border-radius: 10rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Buttons */
+.card__button {
+  width: 100%;
+  padding: 1.6rem 2.4rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 5.6rem;
+  /* 56px */
+}
+
+.card__button--outline {
+  background: transparent;
+  border: 0.1rem solid #d9dbe9;
+  font-size: 1.6rem;
+  /* 16px */
+  font-weight: 500;
+  color: #170f49;
+}
+
+.card__button--outline:hover {
+  background: #f8f9fc;
+  border-color: #170f49;
+}
+
+.card__button--gradient {
+  background: linear-gradient(6deg, #4A3AFF, #8C82FF);
+  border: none;
+  font-size: 1.8rem;
+  /* 18px */
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.card__button--gradient:hover {
+  opacity: 0.9;
+  transform: translateY(-0.1rem);
+}
+
+/* Features List */
+.card__features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  /* 24px */
+}
+
+.card__feature {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.card__check {
+  width: 2rem;
+  /* 20px */
+  height: 2rem;
+  /* 20px */
+  flex-shrink: 0;
+}
+
+.card__feature span {
+  font-size: 1.6rem;
+  /* 16px */
+  font-weight: 400;
+  color: #6f6c8f;
+}
+
+/* Responsive Layout */
+@media (max-width: 1200px) {
+  .pricing__container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card--side,
+  .card--center {
+    width: 100%;
+    max-width: 45.4rem;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    padding: 2rem 1.5rem;
+  }
+
+  .card {
+    padding: 2.4rem;
+  }
+
+  .card__badge {
+    top: 2.4rem;
+    right: 2.4rem;
+  }
+}
